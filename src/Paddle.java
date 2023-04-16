@@ -42,11 +42,11 @@ public class Paddle extends Rectangle {
     public void KeyReleased(KeyEvent e) {
         switch (id) {
             case 1:
-                if (e.getKeyCode() == KeyEvent.VK_Q) {
+                if (e.getKeyCode() == KeyEvent.VK_W) {
                     setYDirection(0);
                     move();
                 }
-                if (e.getKeyCode() == KeyEvent.VK_A) {
+                if (e.getKeyCode() == KeyEvent.VK_S) {
                     setYDirection(0);
                     move();
                 }

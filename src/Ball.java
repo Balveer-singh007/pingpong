@@ -15,12 +15,18 @@ public class Ball extends Rectangle {
         random = new Random();
         int randomXDirection = random.nextInt(2);
         if (randomXDirection == 0)
+        {
             randomXDirection--;
+        }
+
         setXDirection(randomXDirection * initalSpeed);
 
         int randomYDirection = random.nextInt(2);
         if (randomYDirection == 0)
+        {
             randomYDirection--;
+        }
+
         setYDirection(randomYDirection);
     }
 
@@ -40,5 +46,6 @@ public class Ball extends Rectangle {
     public void draw(Graphics g) {
         g.setColor(Color.white);
         g.fillOval(x, y, height, width);
+        g.drawLine(1000/2,0,1000/2,555);
     }
 }

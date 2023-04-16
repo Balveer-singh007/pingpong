@@ -78,13 +78,15 @@ public class GamePanel extends JPanel implements Runnable {
             ball.xVelocity++; // optional
             if (ball.yVelocity > 0) {
                 ball.yVelocity++; // optional
-            } else
+            }
+            else{
                 ball.yVelocity--;
+            }
             ball.setXDirection(ball.xVelocity);
             ball.setYDirection(ball.yVelocity);
         }
 
-        if (ball.intersects(paddle1)) {
+        if (ball.intersects(paddle2)) {
             ball.xVelocity = Math.abs(ball.xVelocity);
             ball.xVelocity++; // optional
             if (ball.yVelocity > 0) {
@@ -139,12 +141,12 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     public class AL extends KeyAdapter {
-        public void KeyPressed(KeyEvent e) {
+        public void keyPressed(KeyEvent e) {
             paddle1.KeyPressed(e);
             paddle2.KeyPressed(e);
         }
 
-        public void KeyReleased(KeyEvent e) {
+        public void keyReleased(KeyEvent e) {
             paddle1.KeyReleased(e);
             paddle2.KeyReleased(e);
         }
